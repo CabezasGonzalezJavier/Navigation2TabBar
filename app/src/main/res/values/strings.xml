@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Navigation2TabBar</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="fragment_first_title">First</string>
+    <string name="fragment_second_title">Second</string>
+    <string name="fragment_third_title">Third</string>
+</resources>
