@@ -8,14 +8,14 @@ import android.view.ViewGroup;
 
 import com.thedeveloperworldisyours.maquetasinnombre.R;
 
-public class SecondTabFragment extends Fragment {
+public class SecondBottomTabFragment extends Fragment {
 
-    public SecondTabFragment() {
+    public SecondBottomTabFragment() {
         // Required empty public constructor
     }
 
-    public static SecondTabFragment newInstance() {
-        return new SecondTabFragment();
+    public static SecondBottomTabFragment newInstance() {
+        return new SecondBottomTabFragment();
     }
 
     @Override
@@ -27,7 +27,7 @@ public class SecondTabFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second_tab, container, false);
+        return inflater.inflate(R.layout.fragment_second_bottom_tab, container, false);
     }
 
 }

@@ -1,25 +1,25 @@
 package com.thedeveloperworldisyours.maquetasinnombre.adapter;
 
-import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.thedeveloperworldisyours.maquetasinnombre.R;
+import com.thedeveloperworldisyours.maquetasinnombre.fragments.FirstBottomTabFragment;
 import com.thedeveloperworldisyours.maquetasinnombre.fragments.FirstFragment;
-import com.thedeveloperworldisyours.maquetasinnombre.fragments.SecondTabFragment;
-import com.thedeveloperworldisyours.maquetasinnombre.fragments.ThirdTabFragment;
+import com.thedeveloperworldisyours.maquetasinnombre.fragments.SecondFragment;
+import com.thedeveloperworldisyours.maquetasinnombre.fragments.ThirdFragment;
 
 /**
  * Created by javierg on 06/01/2017.
  */
 
-public class TabsAdapter extends FragmentPagerAdapter {
+public class TabsAdapter extends FragmentStatePagerAdapter {
 
     public static final int TOTAL_TABS = 3;
-    public Context mContext;
+    public FirstBottomTabFragment mContext;
 
-    public TabsAdapter(FragmentManager fm, Context context) {
+    public TabsAdapter(FragmentManager fm, FirstBottomTabFragment context) {
         super(fm);
         mContext = context;
     }
@@ -30,10 +30,10 @@ public class TabsAdapter extends FragmentPagerAdapter {
             case 0:
                 return new FirstFragment().newInstance();
             case 1:
-                return new SecondTabFragment().newInstance();
+                return new SecondFragment().newInstance();
             case 2:
             default:
-                return new ThirdTabFragment().newInstance();
+                return new ThirdFragment().newInstance();
         }
     }
 

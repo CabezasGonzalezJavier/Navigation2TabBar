@@ -5,12 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -25,10 +23,9 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
-import com.thedeveloperworldisyours.maquetasinnombre.adapter.TabsAdapter;
-import com.thedeveloperworldisyours.maquetasinnombre.fragments.FirstFragment;
-import com.thedeveloperworldisyours.maquetasinnombre.fragments.SecondTabFragment;
-import com.thedeveloperworldisyours.maquetasinnombre.fragments.ThirdTabFragment;
+import com.thedeveloperworldisyours.maquetasinnombre.fragments.FirstBottomTabFragment;
+import com.thedeveloperworldisyours.maquetasinnombre.fragments.SecondBottomTabFragment;
+import com.thedeveloperworldisyours.maquetasinnombre.fragments.ThirdBottomTabFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -49,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
+        getSupportActionBar().setElevation(0);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        mTabHost = (TabHost) findViewById(android.R.id.tabhost);
+        mTabHost = (TabHost) findViewById(R.id.content_main);
 
         mTabHost.setup();
 
@@ -143,13 +141,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             mCurrentTab = tabId;
 
             if (tabId.equals(FIRST_TAB)) {
-                pushFragments(FirstFragment.newInstance(), false,
+                pushFragments(FirstBottomTabFragment.newInstance(), false,
                         false, null);
             } else if (tabId.equals(SECOND_TAB)) {
-                pushFragments(SecondTabFragment.newInstance(), false,
+                pushFragments(SecondBottomTabFragment.newInstance(), false,
                         false, null);
             } else if (tabId.equals(THIRD_TAB)) {
-                pushFragments(ThirdTabFragment.newInstance(), false,
+                pushFragments(ThirdBottomTabFragment.newInstance(), false,
                         false, null);
             }
 
