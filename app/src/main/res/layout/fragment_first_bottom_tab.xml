@@ -12,7 +12,9 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         app:layout_scrollFlags="scroll"
-        app:tabSelectedTextColor="@android:color/white" />
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabTextColor="@color/colorNormal"
+        android:elevation="@dimen/fab_margin"/>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
